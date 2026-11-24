@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+	int matris[3][4];
+	int a,b;
+	int hesap=0;
+	int tut=0;
+	for(a=0;a<=2;a++)
+	{
+		for(b=0;b<=3;b++)
+		{
+			printf("%d. magaza %d. ceyrek geliri(bin tl uzerinden)-> ",a+1,b+1);
+			scanf("%d",&matris[a][b]);
+			if(matris[a][b]>=100)
+			{
+				tut=tut+1;
+			}
+		}
+	}
+	
+	for(a=0;a<=2;a++)
+	{
+		for(b=0;b<=3;b++)
+		{
+			hesap=hesap+matris[a][b];
+		}
+		printf("%d.magaza yillik toplam gelir %d\n",a+1,hesap);
+		hesap=0;
+	}
+	printf("100 bin tl uzerinde olan ceyrek donem sayisi-> %d",tut);	
+	return 0;
+}
